@@ -115,22 +115,31 @@
             </a>
           </li>
 
+          <?php
+            session_start();
+            if (!isset($_SESSION['user'])){
+          ?>
           <li class="nav-item ms-lg-3">
-            
-<!--             if (! isset($_SESSION['user'])){ -->
-<!--                 echo '<a id="login" class="nav-link" href="./login.php">Login</a>'; -->
-<!--             } else -->
-<!--              { -->
-<!--                  $userName = $_SESSION['user']['name'];  -->
-<!--                  echo '<a href = "./accountInfo.php">'.$username.'</a>';           } -->
-            
-           
-           
             <a class="nav-link" aria-current="page" href="login.php">
               <i class="fa-solid fa-user"></i> Login
             </a>
-            
           </li>
+          <?php
+
+            }else{
+
+          ?>
+
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link" aria-current="page" href="user_profile.php">
+              <i class="fa-solid fa-user"></i> <?php  echo $_SESSION['user']['name'];?>
+            </a>
+          </li>
+          <?php 
+
+            }
+          ?>
+        
         </ul>
       </div>
     </div>

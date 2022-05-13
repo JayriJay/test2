@@ -38,10 +38,10 @@
 
 			<p class="mb-3">Role :</p>
 			
-			<input type="checkbox" id="chef" name="cher" value="chef">
+			<input type="radio" id="chef" name="role" value="2">
 			<label for="chef">Chef</label>
 
-			<input type="checkbox" id="user" name="user" value="user">
+			<input type="radio" id="user" name="role" value="3" checked>
 			<label for="user">User</label>
 
 			
@@ -60,12 +60,14 @@
         var email = $('#email').val();
         var password = $('#password').val();
         var cPassword = $('#cpassword').val();
+        var role = $('input[name=role]:checked').val();
+   
         if(emailValid.test(email) && passValid.test(password) && password == cPassword){
 //             $('.input-error').html('');
             $.ajax({
             method: "POST",
 	        url: "register_API.php",
-                data: {username:username,email:email,pass:password},
+                data: {username:username,email:email,pass:password,role:role},
 				datatype: "json"
             }).done(function(msg){
            
@@ -80,10 +82,7 @@
                  }
                 else{
                     alert("Unable to register!");
-
                 }
-
-
 
             });
         }

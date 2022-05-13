@@ -11,10 +11,11 @@ if ($conn->connect_error)
     $email = $_REQUEST['email'] ?? "";
     $pass = $_REQUEST['pass'] ?? "";
     $username = $_REQUEST['username'] ?? "";
+    $role = $_REQUEST['role'] ?? "";
     $query = "SELECT `email` FROM `user` WHERE email = '$email'";
     $result = $conn->query($query);
     if ($result->num_rows == 0) {
-        $query = "INSERT INTO user( name, email, password) VALUES ('$username','$email','$pass');";
+        $query = "INSERT INTO user( name, email, password, role_id) VALUES ('$username','$email','$pass', '$role');";
        
        if ( $result = $conn->query($query)) {
             $_SESSION['user'] = $username;

@@ -53,11 +53,10 @@ $(document).ready(function(){
 		})
 		.done(function(msg){
 			console.log(msg);
-			// var result=msg.trim();
-		// 	if(result=="Success")
-		// 	// window.location.href = "http://localhost/5530CSMMChawPoPoThaw/index.php";
-		// 	else
-		// 	alert('Incorrect Email or Password');
+		 	if(msg=="Success")
+		 	window.location.href = "http://localhost/5530CSMMChawPoPoThaw/index.php";
+		 	else
+		 	alert('Incorrect Email or Password');
 		})
 		.catch(function(err){
 			console.log(err);

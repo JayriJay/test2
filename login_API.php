@@ -11,19 +11,19 @@ try{
 }catch(Exception $e){
     $error = $e->getMessage();
 }
-
-$query = <<<SQL
-SELECT * FROM user WHERE email=':email' AND password=':password';
-SQL;
-
+$query="SELECT * FROM user where email=:email";
 $result = $db->prepare($query);
-$res = $result->execute(array(':email'  => $email,
-                              ':password'  => $password,
-                            ));
+$result->execute(array(':email'=>$email));
+
 $r = $result->fetch(PDO::FETCH_ASSOC);
-print_r($r);
-     // if($res){
-     //    echo "Success";
-     // }else{
-     //    echo "failed";
-     // }
+if(is_array($r)){
+    if ($r['password']==$password){
+        $_SESSION['user']=$r;
+        echo "Success";
+    }else{
+        echo "Failed";
+    }
+}else{
+        echo "Failed";
+    }
+
