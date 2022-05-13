@@ -21,46 +21,48 @@
 	<div class="form-area">
 		<h3>Login to recipe</h3>
 		<form>
-			
 			<p>Email</p>
 			<input type="text" name="" id="email" 
 			placeholder="Enter your Email" value="" required>
 			
-
 			<p class="mt-3">Password</p>
 			<input type="password" name="" id="password" placeholder="Enter your Password" value="" required>
 			
 			<input type="submit" name="" id="login" value="Login" class="mt-4">
+
 			<div class="mb-3">
 				<a href="#" class="loginn">Forgot Password?</a>
 				<a href="register.php" style="float: right;" class="loginn">Sign Up</a>
 			</div>
+
 			<a href="index.php" class="loginn">Back To Home</a>
 		</form>
 	</div>
 <script>
 $(document).ready(function(){
-$('#login').click(function(e){
-e.preventDefault();
-console.log(e);
-var email=$('#email').val();
-var password=$('#password').val();
-$.ajax({
-method: "POST",
-url: "login_API.php",
-data: {mail:email, psw:password}
-})
-.done(function(msg){
-console.log(msg);
-var result=msg.trim();
-if(result=="Success")
-window.location.href = "http://localhost/5530CSMMChawPoPoThaw/index.php";
-else
-alert('Incorrect Email or Password');
-
-})
-
-})
+	$('#login').click(function(e){
+		e.preventDefault();
+		console.log(e);
+		var email=$('#email').val();
+		var password=$('#password').val();
+		alert (email);
+		$.ajax({
+			method: "POST",
+			url: "login_API.php",
+			data: {mail:email, psw:password}
+		})
+		.done(function(msg){
+			console.log(msg);
+			// var result=msg.trim();
+		// 	if(result=="Success")
+		// 	// window.location.href = "http://localhost/5530CSMMChawPoPoThaw/index.php";
+		// 	else
+		// 	alert('Incorrect Email or Password');
+		})
+		.catch(function(err){
+			console.log(err);
+		})
+	})
 })
 
 </script>

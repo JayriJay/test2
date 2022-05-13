@@ -1,6 +1,4 @@
 <?php
-$host = 'localhost';
-$database ='recipe';
-$user = 'root';
-$pass = '';
+$dsn = 'mysql:host=localhost;dbname=recipe_db';
+$db = new PDO($dsn, 'root', '');
 ?>

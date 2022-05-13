@@ -1,28 +1,29 @@
 <?php
 session_start();
-require_once 'db_info.php';
 http_response_code(200);
 
 $email = $_POST['mail'];
 $password = $_POST['psw'];
 
-$conn = new mysqli($host, $user, $pass, $database);
-if($conn -> connect_error)
-    die("Connection Error".$conn->connect_error);
-    if (!$conn->set_charset("utf8mb4")){
-        printf("Error loading character set utf8 %s\n", $mysqli->error);
-        exit();
-    }
+try{
+    require_once('db_info.php');
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(Exception $e){
+    $error = $e->getMessage();
+}
+
 $query = <<<SQL
-SELECT * FROM user WHERE email='$email' AND password='$password';
+SELECT * FROM user WHERE email=':email' AND password=':password';
 SQL;
 
-$result = $conn->query($query);
-$rows = $result->num_rows;
-if ($rows !=0){
-    $r = $result->fetch_array(MYSQLI_ASSOC);
-    $_SESSION['user'] = $r;
-    echo "Success";
-}   else 
-        echo "Fail";
-?>
+$result = $db->prepare($query);
+$res = $result->execute(array(':email'  => $email,
+                              ':password'  => $password,
+                            ));
+$r = $result->fetch(PDO::FETCH_ASSOC);
+print_r($r);
+     // if($res){
+     //    echo "Success";
+     // }else{
+     //    echo "failed";
+     // }
