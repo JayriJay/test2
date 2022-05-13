@@ -1,0 +1,232 @@
+ <!-- about recipe -->
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="image/Gnocchi-pasta-bake.jpg" class="img-fluid shadow">
+        </div>
+        <div class="col-lg-6 mt-5">
+          <div>
+            <h3>Gnocchi-Pasta-Bake</h3>
+            <div class="d-flex">
+              <h5 class="mt-3">Cook by Denial</h5>
+              <a href="" class="mt-3" style="margin-left: 20px;">Rate This Recipe</a>
+            </div>
+
+            <div class="summary-item-wrapper d-flex justify-content-between mt-3">
+              <div class="recipe-summary-item h2-text">
+                <span class="value font-light h2-text">Chicken</span>
+                <span class="unit font-normal p3-text"><i class="fa-solid fa-utensils" style="margin-right: 10px; color: #F4CE33;"></i>Main ingrediant</span>
+              </div>
+                 <div class="recipe-summary-item h2-text">
+                <span class="value font-light h2-text">(3)</span>
+                <span class="unit font-normal p3-text"><i class="fa-solid fa-star" style="margin-right: 10px; color: #F4CE33;"></i>Rating Stars</span>
+              </div>
+                 <div class="recipe-summary-item h2-text">
+                <span class="value font-light h2-text">25 mins</span>
+                <span class="unit font-normal p3-text"><i class="fa-solid fa-clock" style="margin-right: 10px; color: #F4CE33;"></i>Cooking times</span>
+              </div>
+            </div>
+
+             <ul class="recipe-tags mt-3">
+              <li class="recipe-tag micro-text"><span class="tag-link">Strew</span></li>
+              <li class="recipe-tag micro-text"><span class="tag-link">Breakfast</span></li>
+              <li class="recipe-tag micro-text"><span class="tag-link">Korean</span></li>
+            </ul>
+
+
+            <button type="button" class="btn btn-outline-dark mt-5">Save Items</button>
+            <a href="description.php" class="btn btn-outline-dark mt-5">Read Description</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    --------------------------------------------
+    
+       .summary-item-wrapper{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+    }
+    .recipe-summary-item{
+      color: #4a4a4a;
+      text-align: center;
+    }
+    .recipe-summary-item .value{
+      color: #4a4a4a;
+      display: inline-block;
+    }
+    .h2-text{
+      font-size: 30px;
+      line-height: 2;
+    }
+    .recipe-summary-item .unit{
+     position: relative;
+     top: -4px;
+     display: block;
+    }
+    .p3-text{
+      font-size: 14px;
+      line-height: 1.714285714285714;
+    }
+    .recipe-tag{
+      border: 2px solid #F4CE33;
+      border-radius: 2em;
+      display: inline-block;
+      width: auto;
+      margin: 0;
+    }
+    .micro-text{
+      font-size: 12px;
+      line-height: 1;
+    }
+    .tag-link{
+      background: transparent;
+      border-radius: 2em;
+      color: black;
+      padding:0.75em 1.5em;
+      display: block;
+      transition: all 400ms ease;
+      text-transform: capitalize;
+    }
+    .recipe-tags{
+      text-align: left;
+      margin: 1em auto 0;
+      list-style: none;
+      padding: 0;
+    }
+    .recipe-rating{
+      animation: fadeIn .35s;
+      background-color: #577862;
+      color: #fff;
+      margin-top: 8px;
+      padding: 16px;
+      position: absolute;
+      width: 290px;
+    }
+    --------------------------------------
+    
+      <!-- search form -->
+    <section style="background-color: gray; padding:30px;">
+          <div class="container">
+            <div class="row">
+              <form class="d-flex justify-content-center">
+                <div class="col-6">
+                  <div class="input-group mb-4">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Recipient's username">
+                      <button class="btn btn-outline-light" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                  </div> 
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex justify-content-center">
+              <form>
+                <!-- Search by category -->
+                  <div class="col">
+                    <div class="form-group mb-3">
+                      <select  class="form-select">
+                        <option value="" disabled selected>Search by category</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="cake">Cake</option>
+                        <option value="juice">Juice</option>
+                      </select> 
+                    </div>
+                  </div>
+    
+                <!-- Search by Main Ingredient -->
+                  <div class="col">
+                    <div class="form-group mb-3">
+                      <select  class="form-select">
+                        <option value="" disabled selected>Search by Main Ingredient</option>
+                        <option value="french">Vegetables</option>
+                        <option value="europen">Chicken</option>
+                        <option value="thailand">Beef</option>
+                        <option value="chinese">Pork</option>
+                        <option value="japanee">Goose</option>
+                        <option value="japanee">Shrimp</option>
+                        <option value="japanee">Fish</option> 
+                        <option value="french">Octopus</option>
+                        <option value="japanee">Mussels</option>
+                        <option value="japanee">Fruit</option>  
+                        <option value="japanee">Noodle</option>
+                      </select> 
+                    </div>
+                  </div>
+    
+                <!-- Search by country -->
+                  <div class="col">
+                    <div class="form-group mb-3">
+                      <select  class="form-select">
+                        <option value="" disabled selected>Search by country</option>
+                        <option value="europen">Europen</option>
+                        <option value="french">French</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="japanee">Japanese</option>
+                      </select> 
+                    </div>
+                  </div>
+    
+                <!-- Search by Cooking time -->
+                  <div class="col">
+                   <div class="form-group mb-3">
+                          <select  class="form-select">
+                            <option value="" disabled selected>Search by Cooking-time</option>
+                            <option value="10"> 10-mins</option>
+                            <option value="15"> 15-mins</option>
+                            <option value="25"> 25-mins</option>
+                            <option value="30"> 30-mins</option>
+                            <option value="35"> 35-mins</option>
+                            <option value="40"> 40-mins</option>
+                            <option value="45"> 45-mins</option>
+                            <option value="50"> 50-mins</option>
+                            <option value="55"> 55-mins</option>
+                            <option value="60"> 60-mins</option>
+                            <option value="65"> 65-mins</option>
+                            <option value="70"> 70-mins</option>
+                          </select> 
+                    </div>
+                  </div>
+                
+                <!-- Sort by -->
+                  <div class="col">
+                    <div class="form-group mb-3">
+                          <select  class="form-select">
+                            <option value="" disabled selected>Search by rating</option>
+                            <option value="popular">Popular recipe</option>
+                            <option value="latest">Latest recipe</option>
+                          </select> 
+                    </div>
+                  </div>
+    
+                <!-- Search & cancle -->
+                  <div class="col">
+                    <div class="form-group mb-3">
+                      <input type="submit" name="" class="btn btn-info" value="Search">
+                      <input type="reset" name="" class="btn btn-info" value="Cancle">
+                    </div>
+                  </div>
+              </form>
+            </div>
+            </div>
+          </div>
+    </section>
+    -------------
+    
+    <?php
+$host = 'localhost';
+$database ='recipe';
+$user = 'root';
+$pass = '';
+?>
+    

@@ -1,0 +1,188 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(image/pexels-roman-odintsov-6534617.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	font-family: Sans-serif;
+	
+}
+.form-area{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 400px;
+		height: auto;
+		box-sizing: border-box;
+		background: rgba(0,0,0,0.5);
+		padding: 30px;
+		letter-spacing: 1px;
+}
+h3{
+	text-align: center;
+	padding: 0 0 20px;
+	font-weight: bold;
+	color: #ffffff;
+}
+.form-area p{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #ffffff;
+}
+.form-area label{
+	margin:0;
+	padding: 0;
+	font-size: 16px;
+	color:  #ffffff;
+}
+.form-area #email,
+		   #password,
+           #login{
+				margin-bottom: 20px;
+				width: 100%;
+}
+.form-area #admin,
+           #user,
+           #chef{
+				margin-bottom: 30px;
+	            margin-left: 10px;
+}
+input #admin{
+	margin-bottom: 20px;
+}
+.form-area input[type=text],
+.form-area input[type=password]{
+	border:none;
+	border-bottom:1px solid #ffffff;
+	background-color: transparent;
+	outline: none;
+	height: 40px;
+	color: #ffffff;
+	display: 16px;
+	letter-spacing: 2px;
+}
+
+::placeholder{
+	color: #ffffff;
+	margin-left: 10px;
+}
+/*
+.form-area{
+	margin-top: 20px;
+	padding: 10px 0;
+}
+*/
+.form-area input[type=submit]{
+	border:none;
+	height: 40px;
+	outline: none;
+	color: #ffffff;
+	font-size: 15px;
+	background-color: #63C8F2;
+	cursor: pointer;
+	border-radius: 20px;
+}
+.form-area input[type=submit]:hover{
+	background-color: red;
+	color: #ffffff;
+}
+.form-area a{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 14px;
+	
+}
+/*****************************************REGISTER***********************************************/
+.Rform-area{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 400px;
+		height: 650px;
+		box-sizing: border-box;
+		background: rgba(0,0,0,0.5);
+		padding: 30px;
+		letter-spacing: 1px;
+}
+.Rform-area p{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #ffffff;
+}
+.Rform-area label{
+	margin:0;
+	padding: 0;
+	font-size: 16px;
+	color:  #ffffff;
+}
+.Rform-area #name,
+.Rform-area #email,
+.Rform-area #password,
+.Rform-area #login{
+		margin-bottom: 20px;
+		width: 100%;
+}
+.Rform-area input#cpassword{
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.Rform-area #admin,
+.Rform-area #user,
+.Rform-area #chef{
+		margin-bottom: 30px;
+	    margin-left: 10px;
+}
+.Rform-area input[type=text],
+.Rform-area input[type=password]{
+	border:none;
+	border-bottom:1px solid #ffffff;
+	background-color: transparent;
+	outline: none;
+	height: 40px;
+	color: #ffffff;
+	display: 16px;
+	letter-spacing: 2px;
+}
+
+::placeholder{
+	color: #ffffff;
+}
+/*
+.form-area{
+	margin-top: 20px;
+	padding: 10px 0;
+}
+*/
+.Rform-area input[type=submit]{
+	border:none;
+	height: 40px;
+	outline: none;
+	color: #ffffff;
+	font-size: 15px;
+	background-color: #63C8F2;
+	cursor: pointer;
+	border-radius: 20px;
+}
+.Rform-area input[type=submit]:hover{
+	background-color: red;
+	color: #ffffff;
+}
+.Rform-area a{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 14px;
+	
+}
+.Rform-area a.register:hover{
+	color: #77E2E1;
+} 
+.form-area a.loginn:hover{
+	color: #77E2E1;
+}
