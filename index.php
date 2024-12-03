@@ -128,10 +128,19 @@
 
             }else{
 
+          $link = "";
+          if ($_SESSION['user']['role_id']==2) {
+            $link = "chef_profile.php";
+          }
+          else{
+            $link = "user_profile.php";
+          }
           ?>
 
+
+
           <li class="nav-item ms-lg-3">
-            <a class="nav-link" aria-current="page" href="user_profile.php">
+            <a class="nav-link" aria-current="page" href="<?=$link?>">
               <i class="fa-solid fa-user"></i> <?php  echo $_SESSION['user']['name'];?>
             </a>
           </li>
@@ -202,10 +211,10 @@
             <div class="card my-2 recipe-bottom">
               <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration:none; color:balck;">
+                <a href="recipe_detail.php" style="text-decoration:none; color:balck;">
                 <img src="image/bf_1.jpg"   class="card-img-top" alt="The best bread pudding"></a>
                 <div class="card-body">
-                  <a href="" class="underline"><h5>The Best Bread Pudding</h5></a>
+                  <a href="recipe_detail.php" class="underline"><h5>The Best Bread Pudding</h5></a>
                   <p>by chef</p>
                 </div>
                 <div class="card-footer" style="border-top: none;">
@@ -223,10 +232,10 @@
             <div class="card my-2 recipe-bottom">
               <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration:none; color:balck;">
+                <a href="recipe_detail.php" style="text-decoration:none; color:balck;">
                 <img src="image/spaghetti.jpg" class="card-img-top"></a>
                 <div class="card-body">
-                  <a href="" class="underline"><h5>The Best Bread Pudding</h5></a>
+                  <a href="recipe_detail.php" class="underline"><h5>The Best Bread Pudding</h5></a>
                   <p>by chef</p>
                 </div> 
                 <div class="card-footer" style="border-top: none;">
@@ -244,10 +253,10 @@
             <div class="card my-2 recipe-bottom">
               <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration:none; color:balck;">
+                <a href="recipe_detail.php" style="text-decoration:none; color:balck;">
                 <img src="image/strawberries-and-cream-steel-cut-oats-8.jpg" class="card-img-top"></a>
                 <div class="card-body">
-                  <a href="" class="underline"><h5>The Best Bread Pudding</h5></a>
+                  <a href="recipe_detail.php" class="underline"><h5>The Best Bread Pudding</h5></a>
                   <p>by chef</p>
                 </div>
                  <div class="card-footer" style="border-top: none;">
@@ -265,10 +274,10 @@
             <div class="card my-2 recipe-bottom">
               <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration:none; color:balck;">
+                <a href="recipe_detail.php" style="text-decoration:none; color:balck;">
                 <img src="image/buffalo-wings-1.jpg" class="card-img-top"></a>
                 <div class="card-body">
-                  <a href="" class="underline"><h5>The Best Bread Pudding</h5></a>
+                  <a href="recipe_detail.php" class="underline"><h5>The Best Bread Pudding</h5></a>
                   <p>by chef</p>
                 </div>
                 <div class="card-footer" style="border-top: none;">
@@ -286,10 +295,10 @@
             <div class="card my-2 recipe-bottom">
               <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration:none; color:balck;">
+                <a href="recipe_detail.php" style="text-decoration:none; color:balck;">
                 <img src="image/buffalo-wings-1.jpg" class="card-img-top"></a>
                 <div class="card-body">
-                  <a href="" class="underline"><h5>The Best Bread Pudding</h5></a>
+                  <a href="recipe_detail.php" class="underline"><h5>The Best Bread Pudding</h5></a>
                   <p>by chef</p>
                 </div>
                 <div class="card-footer" style="border-top: none;">
@@ -318,44 +327,44 @@
               </h1> 
         </div>
     <div class="col-lg-2 col-md-3 col-6 mb-5">
-      <a href="" ><img src="image/Gnocchi-pasta-bake.jpg" class="img-fluid shadow"></a>
+      <a href="recipe_detail.php" ><img src="image/Gnocchi-pasta-bake.jpg" class="img-fluid shadow"></a>
       <div>
-        <a href="" class="underline"><p class="mt-2" style="text-align: center;">Chorizo & mozzarella gonocchi bake</p></a>
+        <a href="recipe_detail.php" class="underline"><p class="mt-2" style="text-align: center;">Chorizo & mozzarella gonocchi bake</p></a>
       </div>
     </div>
 
     <div class="col-lg-2 col-md-3 col-6 mb-5">
-      <a href="" ><img src="image/2.jpg" class="img-fluid shadow"></a>
+      <a href="recipe_detail.php" ><img src="image/2.jpg" class="img-fluid shadow"></a>
       <div>
-        <a href="" class="underline"><p class="mt-2" style="text-align: center;">Chicken & Veggie Stir-Fry</p></a>
+        <a href="recipe_detail.php" class="underline"><p class="mt-2" style="text-align: center;">Chicken & Veggie Stir-Fry</p></a>
       </div>
     </div>
 
     <div class="col-lg-2 col-md-3 col-6 mb-5">
-      <a href="" ><img src="image/Thai-fried prawn & pineapple rice.jpg" class="img-fluid shadow"></a>
+      <a href="recipe_detail.php" ><img src="image/Thai-fried prawn & pineapple rice.jpg" class="img-fluid shadow"></a>
       <div>
-        <a href="" class="underline"><p class="mt-2" style="text-align: center;">Thai-Fried Prawn & Pineapple Rice</p></a>
+        <a href="recipe_detail.php" class="underline"><p class="mt-2" style="text-align: center;">Thai-Fried Prawn & Pineapple Rice</p></a>
       </div>
     </div>
 
     <div class="col-lg-2 col-md-3 col-6 mb-5">
-      <a href="" ><img src="image/easypancakE.jpg" class="img-fluid shadow"></a>
+      <a href="recipe_detail.php" ><img src="image/easypancakE.jpg" class="img-fluid shadow"></a>
       <div>
-        <a href="" class="underline"><p class="mt-2" style="text-align: center;">Easy Pan Cake</p></a>
+        <a href="recipe_detail.php" class="underline"><p class="mt-2" style="text-align: center;">Easy Pan Cake</p></a>
       </div>
     </div>
 
     <div class="col-lg-2 col-md-6 col-6 mb-5">
-      <a href="" ><img src="image/easy beef pot.jpg" class="img-fluid shadow"></a>
+      <a href="recipe_detail.php" ><img src="image/easy beef pot.jpg" class="img-fluid shadow"></a>
       <div>
-        <a href="" class="underline"><p class="mt-2" style="text-align: center;">Easy Beef Hot-Pot</p></a>
+        <a href="recipe_detail.php" class="underline"><p class="mt-2" style="text-align: center;">Easy Beef Hot-Pot</p></a>
       </div>
     </div>
 
    <div class="col-lg-2 col-md-6 col-6 mb-5">
-      <a href="" ><img src="image/saliburysteak.jpg" class="img-fluid shadow"></a>
+      <a href="recipe_detail.php" ><img src="image/saliburysteak.jpg" class="img-fluid shadow"></a>
       <div>
-        <a href="" class="underline"><p class="mt-2" style="text-align: center;">Salibury Steak</p></a>
+        <a href="recipe_detail.php" class="underline"><p class="mt-2" style="text-align: center;">Salibury Steak</p></a>
       </div>
     </div>
 

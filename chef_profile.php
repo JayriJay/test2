@@ -1,3 +1,20 @@
+<?php
+        if(!empty($_POST["add_record"])) {
+          require_once("db_info.php");
+          $sql = "INSERT INTO recipe ( user_id, title, category_id, minute, description) 
+                  VALUES ( :chef, :title, :categories, :cooking_time, :description )";
+          $pdo_statement = $db->prepare( $sql );
+    
+          $result = $pdo_statement->execute( array( ':chef'=>$_POST['chef'], 
+                                                    ':title'=>$_POST['title'], 
+                                                    ':categories'=>$_POST['categories'], 
+                                                    ':cooking_time'=>$_POST['cooking_time'], 
+                                                    ':description'=>$_POST['description'] ) );
+          if (!empty($result) ){
+          header('location:chef_profile.php');
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -311,27 +328,26 @@
                 <form action="" method="" enctype="">
 
                   <div class="form-group mb-3">
-                    <input type="text" name="" class="form-control" placeholder="Chef-name" required=""> 
+                    <input type="text" name="chef" class="form-control" placeholder="Chef-name" required=""> 
                   </div>
 
                   <div class="form-group mb-3">
-                    <input type="text" name="" class="form-control" placeholder="Recipe-Title" required=""> 
+                    <input type="text" name="title" class="form-control" placeholder="Recipe-Title" required=""> 
                   </div>
 
                   <div class="form-group mb-3">
-                    <select  class="form-select">
+                    <select  class="form-select" name="categories">
                       <option value="" disabled selected>Categories</option>
-                      <option value="10"> Appetizer </option>
-                      <option value="15"> Soup </option>
-                      <option value="25"> Dressing </option>
-                      <option value="30"> Strew </option>
-                      <option value="35"> Diet </option>
-                      
+                      <option value="1"> Appetizer </option>
+                      <option value="3"> Soup </option>
+                      <option value="4"> Dressing </option>
+                      <option value="2"> Strew </option>
+                      <option value="5"> Diet </option> 
                     </select> 
                   </div>
 
                   <div class="form-group mb-3">
-                    <select  class="form-select">
+                    <select  class="form-select" name="cooking_time">
                       <option value="" disabled selected>Cooking-time</option>
                       <option value="10"> 10-mins</option>
                       <option value="15"> 15-mins</option>
@@ -349,11 +365,11 @@
                   </div>
 
                   <div class="form-group mb-3">
-                    <textarea class="form-control" placeholder="Description" required=""></textarea>
+                    <textarea class="form-control" placeholder="Description" required="" name="description"></textarea>
                   </div>
 
                   <input type="reset" name="" class="btn btn-info float-right mt-3" value="Cancle"> 
-                  <input type="submit" name="" class="btn btn-info  mt-3 mr-5 float-right"  value="Upload">       
+                  <input type="submit" name="add_record" class="btn btn-info  mt-3 mr-5 float-right"  value="Upload">       
                 </form> 
               </div>
             </div>

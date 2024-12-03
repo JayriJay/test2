@@ -255,8 +255,8 @@
 
   <!-- Footer -->
   <!-- bg-color:dark -->
- 
-      <div class="bg-dark mt-5" style=" height: 100px;"><p style="color: white; text-align: center; padding-top: 33px;">Copyright 2022 &copy; RECIPE</p></div>
+ <!-- 
+      <div class="bg-dark mt-5" style=" height: 100px;"><p style="color: white; text-align: center; padding-top: 33px;">Copyright 2022 &copy; RECIPE</p></div> -->
 
 
 

@@ -180,11 +180,11 @@
           <div class="card my-2 recipe-bottom mt-5">
                 <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration: none; color: black;">
+                <a href="recipe_detail.php" style="text-decoration: none; color: black;">
                 <img src="image/bf_1.jpg" class="card-img-top">
                 </a>
             <div class="card-body">
-              <a href="" class="underline">
+              <a href="recipe_detail.php" class="underline">
                 <h5>The Best Bread Pudding</h5>
               </a>
               <p>by chef</p>
@@ -204,11 +204,11 @@
           <div class="card my-2 recipe-bottom mt-5">
                 <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration: none; color: black;">
+                <a href="recipe_detail.php" style="text-decoration: none; color: black;">
                 <img src="image/bf_1.jpg" class="card-img-top">
                 </a>
             <div class="card-body">
-              <a href="" class="underline">
+              <a href="recipe_detail.php" class="underline">
                 <h5>The Best Bread Pudding</h5>
               </a>
               <p>by chef</p>
@@ -228,11 +228,11 @@
           <div class="card my-2 recipe-bottom mt-5">
                 <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration: none; color: black;">
+                <a href="recipe_detail.php" style="text-decoration: none; color: black;">
                 <img src="image/bf_1.jpg" class="card-img-top">
                 </a>
             <div class="card-body">
-              <a href="" class="underline">
+              <a href="recipe_detail.php" class="underline">
                 <h5>The Best Bread Pudding</h5>
               </a>
               <p>by chef</p>
@@ -252,11 +252,11 @@
           <div class="card my-2 recipe-bottom mt-5">
                 <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration: none; color: black;">
+                <a href="recipe_detail.php" style="text-decoration: none; color: black;">
                 <img src="image/bf_1.jpg" class="card-img-top">
                 </a>
             <div class="card-body">
-              <a href="" class="underline">
+              <a href="recipe_detail.php" class="underline">
                 <h5>The Best Bread Pudding</h5>
               </a>
               <p>by chef</p>
@@ -276,11 +276,11 @@
           <div class="card my-2 recipe-bottom mt-5">
                 <div class="favourite">
                 <i class="fa-regular fa-heart fa-lg" style="color:white;"></i></div>
-                <a href="" style="text-decoration: none; color: black;">
+                <a href="recipe_detail.php" style="text-decoration: none; color: black;">
                 <img src="image/bf_1.jpg" class="card-img-top">
                 </a>
             <div class="card-body">
-              <a href="" class="underline">
+              <a href="recipe_detail.php" class="underline">
                 <h5>The Best Bread Pudding</h5>
               </a>
               <p>by chef</p>

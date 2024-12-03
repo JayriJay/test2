@@ -68,25 +68,28 @@
             $.ajax({
             method: "POST",
 	        url: "register_API.php",
-            data: {username:username,email:email,pass:password,role:role},
-            })
-            .done(function(msg){
-            	console.log(msg);
-                if(msg == "Success")
+                data: {username:username,email:email,pass:password,role:role},
+				datatype: "json"
+            }).done(function(msg){
+           
+            var result=msg.trim();
+                if(result == 'Success'){
                     window.location.href="http://localhost/5530CSMMChawPoPoThaw/index.php";
-                 else
-                     alert("Unable to register!!!");
-                 
-            })
-          	.catch(function (err) {
-          		console.log(err);
-          	})
+                }
+                 else if(result == 'Registered'){
+                     $('#em_error').html('This email is already registered');
+                 }
+                else{
+                    alert("Unable to register!");
+                }
+
+            });
         }
 
         else{
-         //     if(username.trim() == ""){
-         //         $('#name-error').html('Please enter username');
-         // }
+             if(username.trim() == ""){
+                 $('#name-error').html('Please enter username');
+         }
             if(!emailValid.test(email)){
                 $('#em_error').html('Please enter valid email');
             }
